@@ -1,0 +1,61 @@
+Returns- how much you make on your investment
+
+Types of Returns:
+- Simple Returns
+- Log Returns
+
+Simple Returns:
+ R_t = (P_t - P_{t-1}) / P_{t-1}
+
+Log Returns:
+    R_t = ln(P_t / P_{t-1})
+
+    where:
+        P_t = Price at time t (new price)
+        P_{t-1} = Price at time t-1 (old price)
+
+    Log returns are used because they are additive over time. This means that the log return for a period of time is equal to the sum of the log returns for each sub-period within that period. For example, if you have a log return for a day, you can find the log return for a week by adding the log returns for each day of the week.
+
+Time-specific Returns
+
+    - Point-to-Point Return (Single Period Return) 
+    - Rolling Return (Return measured continuously over a window)
+
+Volatility: is the standard deviation of returns
+
+Coefficient of Variation: Volatility divided by return
+
+    CV = Volatility / Return
+
+    where:
+        Volatility = Standard deviation of returns
+        Return = Mean of returns
+
+Low CV = good (less risk per return)
+High CV = bad (more risk per return)
+
+i.e. you want to minimize risk while maximizing return
+
+Sharpe Ratio: is the ratio of the mean return to the standard deviation of returns
+
+    Sharpe Ratio = (Mean Return - Risk Free Rate) / Standard Deviation of Returns
+
+    where:
+        Mean Return = Average return
+        Standard Deviation of Returns = Volatility
+        Risk Free Rate = Rate of return on a risk free investment
+
+    High Sharpe Ratio = good (more return per unit of risk)
+    Low Sharpe Ratio = bad (less return per unit of risk)
+
+i.e. How efficiently am I being rewarded for the risk I’m taking?
+
+So:
+
+CV asks: “How much risk per return?”
+Sharpe asks: “How much return per risk?”
+
+Sharpe is preferred because it accounts for risk-free baseline.
+
+    Note: CV breaks down when mean return is near zero or negative
+
