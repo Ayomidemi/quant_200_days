@@ -1,4 +1,4 @@
-Returns- how much you make on your investment
+Day 1: Returns- how much you make on your investment
 
 Types of Returns:
 - Simple Returns
@@ -59,3 +59,8 @@ Sharpe is preferred because it accounts for risk-free baseline.
 
     Note: CV breaks down when mean return is near zero or negative
 
+
+
+
+Day 2: Distribution of Returns
+    A distribution is simply: The shape of all your returns when you group them.
