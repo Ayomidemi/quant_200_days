@@ -121,7 +121,7 @@ Maximmum Drawdown: is the maximum loss from a peak to a trough of a portfolio. I
 
     How drawdown is calculated:
         1. Build cumulative growth 
-            cum_returns = exp(sum(log(1 + returns)))
+            cum_returns = exp(∑log returns)
         2. Track the highest point ever reached
             rolling_max = cum_returns.cummax()
         3. Compare your current value to your peak
