@@ -93,4 +93,48 @@ Gaussian Distribution: is a bell-shaped curve that is symmetric around the mean.
     
     Gaussian distribution assumes returns are clean, symmetric, and extreme events are rare — but markets often break this assumption.
 
+Day 3: Downside Risk
+    sharpe ratio assumes risk = volatility but real portfolio experience risk as how bad can it get before it recovers
+
+    Volatility is symmetric. Pain is asymmetric.
+    Meaning: +5% and -5% are treated equally by volatility but emotionally and financially, losses hurt more.
+
+    Downside volatility is the volatility computed using only the negative return days.
+
+    So instead of asking: “How much does TSLA move overall?”
+    You ask: “How much does TSLA move when it’s losing?”
+
+    i.e. If: downside volatility ≈ overall volatility. Then TSLA’s volatility comes from both up and down movements.
+    If: downside volatility > overall volatility. Then TSLA tends to crash harder than it rallies (very dangerous distribution)
+    If: downside volatility < overall volatility. Then TSLA’s volatility is driven more by upside jumps (still volatile, but less “painful”)
+
+Sortino Ratio: is the ratio of the mean return to the downside volatility i.e reward / downside volatility
+
+    Sortino Ratio = (Mean Return - Risk Free Rate) / Downside Volatility
+
+    where:
+        Mean Return = Average return
+        Risk Free Rate = Rate of return on a risk free investment
+        Downside Volatility = Standard deviation of negative returns
+
+Maximmum Drawdown: is the maximum loss from a peak to a trough of a portfolio. It measures the drop from the highest peak.
+
+    How drawdown is calculated:
+        1. Build cumulative growth 
+            cum_returns = exp(sum(log(1 + returns)))
+        2. Track the highest point ever reached
+            rolling_max = cum_returns.cummax()
+        3. Compare your current value to your peak
+            drawdown = (cum_returns - rolling_max) / rolling_max
+        4. Find the worst drawdown
+            max_drawdown = min(drawdown)
+    
+    NB: A strategy can have high Sharpe but still suffer catastrophic drawdowns.
+
+    Mental Notes:
+    Volatility says: “How much does it move?”
+    Downside volatility says: “How much does it hurt when it moves?”
+    Sortino says: “How much reward do I get per unit of pain?”
+    Drawdown says: “What’s the worst psychological hell I’d experience?”        
+
 
