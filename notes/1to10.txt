@@ -64,3 +64,33 @@ Sharpe is preferred because it accounts for risk-free baseline.
 
 Day 2: Distribution of Returns
     A distribution is simply: The shape of all your returns when you group them.
+
+    Mean return: is the average return over a period of time
+    Standard deviation measures the typical movement away from the mean
+    Skewness measures the asymmetry of the distribution i.e. whether returns lean more towards gains or losses.
+
+    Skew = 0	symmetric
+    Skew > 0	more big positive jumps (right tail heavier)
+    Skew < 0	more big negative crashes (left tail heavier)
+    
+    Kurtosis measures the "tailedness" of the distribution i.e. how heavy the tails are or how often extreme events occur.
+
+    Kurtosis = 3	normal distribution
+    Kurtosis > 3	heavy tails (more extreme events)
+    Kurtosis < 3	light tails (fewer extreme events)
+    
+    NB: Risk is not just volatility. Risk is what happens in the extremes.
+
+Gaussian Distribution: is a bell-shaped curve that is symmetric around the mean.
+
+    Properties:
+        - Mean = Median = Mode
+        - Skewness = 0
+        - Kurtosis = 3
+        - 68% of data falls within 1 standard deviation of the mean
+        - 95% of data falls within 2 standard deviations of the mean
+        - 99.7% of data falls within 3 standard deviations of the mean
+    
+    Gaussian distribution assumes returns are clean, symmetric, and extreme events are rare — but markets often break this assumption.
+
+
