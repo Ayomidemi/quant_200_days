@@ -140,3 +140,41 @@ Maximmum Drawdown: is the maximum loss from a peak to a trough of a portfolio. I
 
 Day 4: Autocorrelation & Market Memory
 
+    Autocorrelation: is the correlation of a series with its past values. i.e. Does today’s return behave like yesterday’s return?
+
+    Autocorrelation = corr(Xt, X_{t-k})
+
+    where:
+        Xt = Value at time t
+        X_{t-k} = Value at time t-k (lagged value)
+        k = Lag (number of periods)
+
+    Autocorrelation measures how much a time series is related to its own past values.
+
+    Lag 1 autocorrelation: correlation between today’s return and yesterday’s return
+
+        𝑐𝑜𝑟𝑟(𝑟𝑡,𝑟𝑡−1)
+
+    Lag 5 autocorrelation: correlation between today’s return and return 5 days ago
+
+        𝑐𝑜𝑟𝑟(𝑟𝑡,𝑟𝑡−5)
+
+    Positive autocorrelation (autocorr > 0): means that if the series is high today, it tends to be high tomorrow (momentum)
+    Negative autocorrelation (autocorr < 0): means that if the series is high today, it tends to be low tomorrow (mean reversion)
+    Zero autocorrelation (autocorr ≈ 0): means that the series has no memory of its past values
+
+NB: Returns often have little memory. i.e. autocorr is often close to 0. 
+    So we square returns to capture the impact of large positive and negative returns.
+
+    Volatility clustering: is the tendency of volatility to cluster together i.e. periods of high volatility tend to be followed by periods of high volatility and periods of low volatility tend to be followed by periods of low volatility.
+
+    Rolling Volatility vs Big Negative Returns (intuition)
+        - If rolling volatility is much larger than big negative returns → volatility is driven by both up and down movements
+        - If rolling volatility is much smaller than big negative returns → volatility is driven mostly by negative returns (dangerous)
+        - If rolling volatility is roughly equal to big negative returns → volatility is driven by both up and down movements
+    
+    GARCH (Generalized Autoregressive Conditional Heteroskedasticity): is a statistical model that describes the variance of a time series as a function of past values of the series and past values of the variance.
+
+    
+
+
