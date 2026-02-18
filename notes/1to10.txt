@@ -138,3 +138,5 @@ Maximmum Drawdown: is the maximum loss from a peak to a trough of a portfolio. I
     Drawdown says: “What’s the worst psychological hell I’d experience?”        
 
 
+Day 4: Autocorrelation & Market Memory
+
