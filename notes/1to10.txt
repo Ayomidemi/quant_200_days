@@ -174,6 +174,34 @@ NB: Returns often have little memory. i.e. autocorr is often close to 0.
         - If rolling volatility is roughly equal to big negative returns → volatility is driven by both up and down movements
     
     GARCH (Generalized Autoregressive Conditional Heteroskedasticity): is a statistical model that describes the variance of a time series as a function of past values of the series and past values of the variance.
+        GARCH answers: Given yesterday’s volatility and yesterday’s shock, what is volatility likely to be today? It models conditional volatility. i.e volatility depends on what just happened.
+
+        GARCH(1,1) model:
+            σ²t = ω + α₁ε²t−1 + β₁σ²t−1
+
+        where:
+            σ²t = Variance at time t
+            ω = Constant
+            α₁ = Coefficient for the squared error term
+            ε²t−1 = Squared error term at time t-1
+            β₁ = Coefficient for the variance term
+            σ²t−1 = Variance at time t-1
+
+        Interpretation:
+            - α₁ measures the impact of today’s shock on tomorrow’s volatility
+            - β₁ measures the impact of yesterday’s volatility on tomorrow’s volatility
+            - ω measures the long-term average volatility
+
+    GARCH is used for:
+        - volatility forecasting
+        - risk management (VaR, expected shortfall)
+        - option pricing inputs
+        - portfolio leverage adjustment
+        - detecting calm vs crisis regimes
+
+    
+
+    
 
     
 
