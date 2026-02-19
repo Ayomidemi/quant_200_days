@@ -200,9 +200,6 @@ NB: Returns often have little memory. i.e. autocorr is often close to 0.
         - detecting calm vs crisis regimes
 
     
-
-    
-
     
 
 
