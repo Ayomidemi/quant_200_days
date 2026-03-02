@@ -199,7 +199,9 @@ NB: Returns often have little memory. i.e. autocorr is often close to 0.
         - portfolio leverage adjustment
         - detecting calm vs crisis regimes
 
-    
+
+
+Day 5: 
     
 
 
