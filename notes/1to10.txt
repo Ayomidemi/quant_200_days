@@ -246,3 +246,66 @@ Day 5 — Market Diagnosis (TSLA)
     
 
 
+Day 6: Gaussian vs Student-t Distribution
+
+    Gaussian Distribution (Normal Distribution)
+        - Bell-shaped curve
+        - Symmetric around the mean
+        - Mean = Median = Mode
+        - Tails decay exponentially
+        - 68% of data within ±1 std dev
+        - 95% of data within ±2 std dev
+        - 99.7% of data within ±3 std dev
+
+    Student-t Distribution
+        - Bell-shaped curve
+        - Symmetric around the mean
+        - Mean = Median = Mode
+        - Tails decay slower than Gaussian
+        - More probability in the tails
+        - More probability in the center
+        - Less probability in the shoulders
+
+    Key Difference
+        - Student-t has fatter tails than Gaussian
+        - Student-t has higher kurtosis than Gaussian
+        - Student-t has more probability in the tails and center
+        - Student-t has less probability in the shoulders
+
+    Why Student-t is better for financial returns
+        - Financial returns have fatter tails than Gaussian
+        - Financial returns have higher kurtosis than Gaussian
+        - Financial returns have more probability in the tails and center
+        - Financial returns have less probability in the shoulders
+
+    When to use Gaussian
+        - When returns are normally distributed
+        - When tails are not fat
+        - When kurtosis is low
+
+    When to use Student-t
+        - When returns have fat tails
+        - When kurtosis is high
+        - When probability in tails and center is higher
+        - When probability in shoulders is lower
+
+    Degrees of Freedom (ν)
+        - This is the most important number today.
+        - ν (nu) controls tail thickness.
+        - Think of ν like “how wild are the tails?”
+        - If:
+            ν → ∞ → normal distribution
+            ν ≈ 30 → almost normal
+            ν ≈ 10 → fat tails
+            ν ≈ 5 → very fat tails
+            ν < 5 → extreme chaos
+
+    So ν tells you:
+        - How wrong was Gaussian?
+
+        NB: AIC=2k−2ln(L) 
+        Where k = number of parameters, L = log-likelihood
+
+        BIC=kln(n)−2ln(L)
+        Where k = number of parameters, L = log-likelihood, n = number of observations
+
