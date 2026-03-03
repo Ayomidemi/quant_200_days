@@ -201,7 +201,48 @@ NB: Returns often have little memory. i.e. autocorr is often close to 0.
 
 
 
-Day 5: 
+Day 5 — Market Diagnosis (TSLA)
+
+    1) Are returns predictable?
+        Evidence
+        - Lag 1 autocorr: [-0.008628]
+        - Lag 5 autocorr: [-0.003758]
+        - Ljung–Box (returns) p-values: [lag 5: 0.999918, lag 10: 0.746769, lag 20: 0.468791]
+        - Interpretation: autocorrelation ~ 0, Ljung–Box fails to reject → no linear memory.
+
+    Conclusion
+        Returns (direction) are not forecastable using past returns alone (at least linearly).
+
+---
+
+    2) Is volatility predictable?
+        Evidence
+        - Squared returns autocorr (lag 1): [0.038829]
+        - Ljung–Box (squared returns) p-values: [lag 10: 0.001722, lag 20: 0.010608]
+        - GARCH(1,1): alpha = [0.0183], beta = [0.9649], alpha+beta = [0.9832]
+        - Interpretation: significant autocorrelation in squared returns + high beta + alpha+beta near 1 → strong volatility persistence.
+
+    Conclusion
+        Volatility is strongly persistent and forecastable (risk clusters in time).
+
+---
+
+    3) What dominates risk dynamics?
+        Given alpha+beta ≈ 0.98:
+        - Volatility regimes last
+        - Shocks decay slowly
+        - Risk clusters in time
+
+        So the dominant structure is conditional variance, not conditional mean.
+
+---
+
+    4) Implications for strategy design
+        If mean is hard to predict but variance is predictable:
+        - Pure directional strategies are fragile without an edge beyond past returns
+        - Risk-adjusted sizing is viable (e.g., volatility targeting)
+        - Dynamic volatility inputs matter for options / leverage decisions
+        - The “exploit” is not direction; it’s risk management and regime awareness
     
 
 
