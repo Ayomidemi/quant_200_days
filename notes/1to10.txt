@@ -309,3 +309,30 @@ Day 6: Gaussian vs Student-t Distribution
         BIC=kln(n)−2ln(L)
         Where k = number of parameters, L = log-likelihood, n = number of observations
 
+
+
+Day 7: Volatility Forecasting
+    - Train/Test Split
+    - Fit the Model on Training Data
+    - Rolling Forecasts:
+        1. Use the model
+        2. Forecast tomorrow’s volatility
+        3. Move forward one day
+            This is called recursive forecasting.
+
+    - Realized Volatility:
+        realized volatility = rt^2
+
+    - Evaluate Forecast Accuracy:
+        MSE (Mean Squared Error)
+            MSE = sqrt(mean((forecast - realized)^2))
+               This measures: How far forecasted variance is from realized variance. Lower = better.
+
+        QLIKE Loss (Very important)
+            QLIKE = mean(log(σ^2) + rt^2/σ^2)
+                QLIKE is preferred because: It penalizes underestimating volatility heavily. Which is important for risk models. If you underestimate volatility, you underestimate risk.
+
+    - Benchmark Model
+
+    NB: Does modeling volatility dynamics improve forecasting?
+
