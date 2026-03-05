@@ -336,3 +336,5 @@ Day 7: Volatility Forecasting
 
     NB: Does modeling volatility dynamics improve forecasting?
 
+
+Day 8: 
