@@ -337,6 +337,5 @@ Day 7: Volatility Forecasting
     NB: Does modeling volatility dynamics improve forecasting?
 
 
-Day 8: GJR-GARCH with Student-t errors
-    
+Day 8: GJR-GARCH with Student-t error
 
