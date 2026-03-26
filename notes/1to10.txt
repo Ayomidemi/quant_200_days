@@ -338,3 +338,5 @@ Day 7: Volatility Forecasting
 
 
 Day 8: GJR-GARCH with Student-t errors
+    
+
