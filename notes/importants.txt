@@ -126,16 +126,16 @@ NB 62:
 
 NB 63:
 
-Note g4:
+NB 64:
 
-Note 65:
+NB 65:
 
-Note 66:
+NB 66:
 
-Note 67:
+NB 67:
 
-Note 68:
+NB 68:
 
-Note 69:
+NB 69:
 
-Note 70:
+NB 70:
